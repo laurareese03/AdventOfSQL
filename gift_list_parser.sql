@@ -10,4 +10,5 @@ CASE tc.category WHEN 'outdoor' THEN 'Outside Workshop' WHEN 'educational' THEN 
 from children c
 join wish_lists wl on c.child_id = wl.child_id
 join toy_catalogue tc on (wl.wishes ->> 'first_choice') = tc.toy_name
-order by c.name asc;
+order by c.name asc
+limit 5;
